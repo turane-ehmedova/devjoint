@@ -1,4 +1,4 @@
-Checkpoint 2 – Pivot Tables
+**Checkpoint 2 – Pivot Tables**
 --Məqsəd
 Bu checkpoint-də Excel-in Pivot Table alətindən istifadə edərək satış datası təhlil olundu və 5 fərqli biznes sualına cavab verən hesabatlar hazırlandı.
 
@@ -47,3 +47,27 @@ Nəticə:Aylıq satış tendensiyasına baxanda ən yüksək göstərici noyabr 
 Final Result
 5 pivot cədvəl vasitəsilə satış datası fərqli bucaqlardan — region, kateqoriya, göndərmə üsulu, seqment və vaxt üzrə — təhlil olundu.
 Bu hesabatlar biznes qərarlarını dəstəkləyəcək praktik məlumat təqdim edir.
+
+
+**Checkpoint 3–Lookup Formulas**
+Məqsəd: Orders sheet-inə People sheet-dən Region əsasında Regional Manager məlumatını lookup formulası ilə birləşdirmək.
+Sual-Hər sifarişin aid olduğu Region-un Regional Manager-i kimdir?
+İstifadə olunan formula:
+=INDEX(People!A:A;MATCH(M2;People!B:B;0))
+
+Formulun izahı:
+- MATCH(M2;People!B:B;0)—Orders sheet-də M sütunundakı Region dəyərini 
+  (məs. "West") People sheet-in B sütununda axtarır və hansı sətirdə 
+  yerləşdiyini tapır.
+- INDEX(People!A:A;...)—tapılan sətir nömrəsinə uyğun olan A sütunundakı 
+  dəyəri (Regional Manager adını) qaytarır.
+
+Qeyd:
+İlk olaraq XLOOKUP funksiyası sınanıldı, lakin Excel versiyasında bu funksiya 
+mövcud olmadığı üçün (#NAME? xətası alındı) INDEX-MATCH kombinasiyasına 
+keçildi. INDEX-MATCH bütün Excel versiyalarında dəstəkləndiyi üçün daha 
+etibarlı seçim oldu.
+
+Nəticə:
+Orders sheet-inə yeni "Regional Manager" sütunu əlavə olundu və bütün 
+sətirlər üçün formula avtomatik tətbiq edildi.
