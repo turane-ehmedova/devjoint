@@ -95,11 +95,11 @@ sətirlərə ardıcıl tətbiq olundu.
 Məqsəd:Satış datasını vizual şəkildə təqdim etmək üçün müxtəlif qrafik tiplərini əhatə edən dashboard hazırlamaq, həmçinin Profit göstəricisini şərti formatlaşdırma ilə vurğulamaq.
 --Dashboard
 Ayrıca "Dashboard" sheet-də aşağıdakı qrafiklər yaradıldı:
-Sales by Region -> Column Chart -> Pivot_Region_Sales
-Sales by Category -> Pie Chart -> Pivot_Category_Sales
-Sales by Segment -> Column Chart -> Pivot_Segment_Sales 
-Orders by Ship Mode -> Donut Chart -> Pivot_ShipMode_Orders 
-Monthly Sales Trend -> Line Chart -> Pivot_Monthly_Sales
+1.Sales by Region -> Column Chart -> Pivot_Region_Sales
+2.Sales by Category -> Pie Chart -> Pivot_Category_Sales
+3.Sales by Segment -> Column Chart -> Pivot_Segment_Sales 
+4.Orders by Ship Mode -> Donut Chart -> Pivot_ShipMode_Orders 
+5.Monthly Sales Trend -> Line Chart -> Pivot_Monthly_Sales
 Hər qrafikin öz başlığı var və dashboard bir baxışda bütün əsas satış göstəricilərini əks etdirir.
 --Şərti Formatlaşdırma
 Orders sheet-də Profit sütununa (U) aşağıdakı qayda tətbiq olundu:
