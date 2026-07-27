@@ -96,10 +96,15 @@ Məqsəd:Satış datasını vizual şəkildə təqdim etmək üçün müxtəlif 
 --Dashboard
 Ayrıca "Dashboard" sheet-də aşağıdakı qrafiklər yaradıldı:
 Sales by Region -> Column Chart -> Pivot_Region_Sales
-Sales by Category -> Pie Chart -> Pivot_Category_Sales 
+
+Sales by Category -> Pie Chart -> Pivot_Category_Sales
+
 Sales by Segment -> Column Chart -> Pivot_Segment_Sales 
+
 Orders by Ship Mode -> Donut Chart -> Pivot_ShipMode_Orders 
+
 Monthly Sales Trend -> Line Chart -> Pivot_Monthly_Sales
+
 Hər qrafikin öz başlığı var və dashboard bir baxışda bütün əsas satış göstəricilərini əks etdirir.
 --Şərti Formatlaşdırma
 Orders sheet-də Profit sütununa (U) aşağıdakı qayda tətbiq olundu:
