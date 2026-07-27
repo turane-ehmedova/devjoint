@@ -71,3 +71,21 @@ etibarlı seçim oldu.
 Nəticə:
 Orders sheet-inə yeni "Regional Manager" sütunu əlavə olundu və bütün 
 sətirlər üçün formula avtomatik tətbiq edildi.
+
+
+**Checkpoint 4 – Hesablanan Sahələr**
+Bu checkpoint-də Orders sheet-inə üç növ hesablanan sütun əlavə edildi:
+1. SUMIFS sütunu — hər region üçün Furniture kateqoriyasının ümumi satışını göstərir:
+=SUMIFS(R:R;M:M;"West";O:O;"Furniture")
+=SUMIFS(R:R; M:M; "Central"; O:O; "Furniture")
+=SUMIFS(R:R; M:M; "South"; O:O; "Furniture")
+=SUMIFS(R:R; M:M; "East"; O:O; "Furniture")
+2. COUNTIFS sütunu — hər region üçün zərərlə (mənfi profit) bağlanan sifarişlərin sayını göstərir:
+=COUNTIFS(M:M;"West";U:U;"<0")
+=COUNTIFS(M:M;"Central";U:U;"<0")
+=COUNTIFS(M:M;"South";U:U;"<0")
+=COUNTIFS(M:M;"East";U:U;"<0")
+3. Profit_Status sütunu (nested IF) — hər sifarişin profitinə əsasən kateqoriya təyin edir:
+=IF(U2<0;"Zərər";IF(U2<100;"Aşağı Qazanc";"Yüksək Qazanc"))
+Nəticədə: Profit mənfidirsə "Zərər", 0-100 arasıdırsa "Aşağı Qazanc", 100-dən çoxdursa "Yüksək Qazanc" kimi işarələnir. Hər üç sütun Orders sheet-in içində, ayrı-ayrı sütunlar şəklində, bütün 
+sətirlərə ardıcıl tətbiq olundu.
