@@ -9,6 +9,17 @@
 
 --Query 1: Orders cədvəlində CustomerID sütunu üçün index yaradaq.
 --Index WHERE və JOIN əməliyyatlarının daha sürətli işləməsinə kömək edir.
+--Index:
+--CustomerID sütununda index yaratmaq WHERE və JOIN əməliyyatlarında
+--axtarışın daha səmərəli aparılmasına kömək etmək üçün istifadə olunur.
+--Index olmadıqda database uyğun məlumatı tapmaq üçün bütün cədvəli
+--yoxlaya bilər(Full Table Scan).
+--Index olduqda isə database index strukturundan istifadə edərək uyğun
+--sətrləri daha tez tapır və bütün cədvəlin yoxlanmasına ehtiyac azalır.
+--Bu üstünlük xüsusilə böyük cədvəllərdə daha aydın nəzərə çarpır.
+--Bundan əlavə, index hər sorğuda mütləq istifadə olunmur.
+--Query optimizer sorğunun və məlumatın vəziyyətindən asılı olaraq
+--index-dən istifadə edib-etməməyə qərar verir.
 CREATE INDEX IF NOT EXISTS idx_orders_customerid ON Orders(CustomerID);
 
 --Query 2:Orders cədvəlindən CustomerID = 'ALFKI' olan sifarişləri göstərək.
@@ -41,10 +52,18 @@ WHERE Orders.CustomerID = Customers.CustomerID) AS TotalOrders
 FROM Customers;
 
 --Query 7:Query 6-dakı sorğunu INNER JOIN istifadə edərək optimallaşdıraq.
+--Qeyd: Əvvəl INNER JOIN istifadə etmişdim lakin bu sifarişi olanları və onların sayını göstərirdi. 
+--Bunu aradan qaldırmaq üçün biz LEFT JOİN-dən istifadə etməliyik ki,sifariş etməyənləridə görmək mümkün olsun.
 SELECT Customers.CompanyName,
 COUNT(Orders.OrderID) AS TotalOrders
 FROM Customers INNER JOIN Orders ON Customers.CustomerID = Orders.CustomerID
 GROUP BY Customers.CompanyName;
+--Qeyd:Yenilənmiş versiyası aşağıdakıdır:
+--Query 7:
+SELECT Customers.CompanyName, COUNT(Orders.OrderID) AS TotalOrders
+FROM Customers LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+GROUP BY Customers.CompanyName;
+
 
 --Query 8:Products cədvəlindən məhsulun adını və qiymətini göstərək.
 --Orta qiymətdən yüksək olan məhsulları Subquery istifadə edərək seçək.
