@@ -55,6 +55,7 @@ NƏTİCƏ: Bütün 7 cədvəl bir-biri ilə əlaqələndirildi və data model da
 NƏTİCƏ: Bütün vizuallar bir-biri ilə interaktiv əlaqədədir(Cross-filtering) və istifadəçiyə vahid ekrandan istənilən parametri filtrləyərək dərin analiz aparmaq imkanı verir.
 
 **Checkpoint 3: Bir neçə vizual arasında bağlı interaktiv filtr/slicer**
+Slicer—Power BI hesabat səhifəsində istifadəçiyə məlumatları dinamik şəkildə filtrləmək imkanı verən interaktiv vizual alətdir.İstifadəçi təcrübəsini(UX) rahatlaşdırmaq və istənilən biznes sualına(məs:2023-cü ildə Onlayn kanalda xərclər nə qədər olub?) bir neçə kliklə cavab tapmaq üçün istifadə olunur.
 Dashboard-a 4 slicer əlavə olundu, hər biri fərqli təhlil kəsimi üçün:
 1. Country slicer (DimGeography.Country)—ölkə üzrə filtrasiya
 2. Category slicer (DimProduct.Category)—məhsul kateqoriyası üzrə filtrasiya
