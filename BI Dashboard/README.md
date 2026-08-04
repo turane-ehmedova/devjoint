@@ -53,3 +53,19 @@ NƏTİCƏ: Bütün 7 cədvəl bir-biri ilə əlaqələndirildi və data model da
 • İzah etdiyi məsələ: Ölkə (və onun altındakı Region) kəsiyində hansı bazarın nə kadar mənfəətlilik (Profit Margin) verdiyini dəqiqliklə təqdim edir.
 
 NƏTİCƏ: Bütün vizuallar bir-biri ilə interaktiv əlaqədədir(Cross-filtering) və istifadəçiyə vahid ekrandan istənilən parametri filtrləyərək dərin analiz aparmaq imkanı verir.
+
+**Checkpoint 3: Bir neçə vizual arasında bağlı interaktiv filtr/slicer**
+Dashboard-a 4 slicer əlavə olundu, hər biri fərqli təhlil kəsimi üçün:
+1. Country slicer (DimGeography.Country)—ölkə üzrə filtrasiya
+2. Category slicer (DimProduct.Category)—məhsul kateqoriyası üzrə filtrasiya
+3. Year slicer (DimDate2.Year)—il üzrə filtrasiya
+4. Channel slicer (FactSales.Channel)—satış kanalı(Online/Retail/Partner/Phone) üzrə filtrasiya
+NECƏ İŞLƏYİR: Bütün slicer-lər eyni səhifədə, dashboard-un digər vizualları ilə(3 KPI kart, Line Chart, Column Chart, Map, Table, Donut Chart) yanaşı yerləşdirilib. Checkpoint 1-də qurulan data model əlaqələri sayəsində (Fact cədvəllərin Dim cədvəllərə key sütunları vasitəsilə bağlanması) bütün bu vizuallar avtomatik olaraq bir-birinə bağlıdır.
+İstifadəçi istənilən slicer-də bir dəyər seçdikdə (məsələn Country="Egypt", Channel="Online", Category="Electronics" və ya Year=2023), 
+Power BI həmin filtri bütün səhifədəki digər vizuallara avtomatik tətbiq edir:
+- KPI kartlar(Total Sales, Total Profit, Total Quantity) yalnız seçilmiş filtrə uyğun məbləğləri göstərir.
+- Line Chart yalnız seçilmiş şərtlərə uyğun aylıq trendi göstərir.
+- Map yalnız seçilmiş ölkə(ləri) vurğulayır.
+- Table sətirləri filtrə uyğun daralır.
+Bir neçə slicer eyni anda istifadə edildikdə (məsələn Country="UAE" VƏ Channel="Retail"), filtrlər birlikdə(AND məntiqi ilə) tətbiq olunur—yəni yalnız hər iki şərtə uyğun data göstərilir.
+NƏTİCƏ: Bu, istifadəçiyə tək bir dashboard üzərində müxtəlif kəsimlərdə(ölkə,kateqoriya, il, kanal) sərbəst analiz aparmaq imkanı verir, ayrıca statik hesabatlar hazırlamağa ehtiyac qalmır.
