@@ -91,6 +91,7 @@ Burada adi bölmə (/) əvəzinə DIVIDE() funksiyasından istifadə olunmuşdur
 -Card 2(Sales vs Target %-Faiz Dəyişimi): Nisbi fərq göstəricisini (-72.80%) faiz formatında əks etdirən kart vizualı.
 
 **Checkpoint 5: Dashboard dizaynı (aydın vizual iyerarxiya, ardıcıl rəng sxemi, izdihamsız)**
+Layihənin Məqsədi:Mürəkkəb biznes məlumatlarını vizual sıxlıq yaradılmadan, gözü yormayan ardıcıl rəng palitrası, təmizlənmiş strukturlar və aydın vizual iyerarxiya ilə icraçı rəhbərliyə təqdim etməkdir.
 Hesabatın icraçı rəhbərlik (Executive Level) tərəfindən rahat oxunması, vizual cluttering-in(sıxlığın) aradan qaldırılması və peşəkar görünüş üçün UI/UX prinsipləri əsasında optimallaşdırma aparılmışdır.
 1. STRUKTUR VƏ VİZUAL İYERARXİYA(GRID LAYOUT):
 -Filter Panel(Sol Zolaq): Bütün dinamik süzgəclər(Channel, Year, Category, Country) sol tərəfdə vertikal qaydada qruplaşdırılaraq əsas analiz sahəsindən ayrılmışdır.
