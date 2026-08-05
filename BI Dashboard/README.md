@@ -89,3 +89,14 @@ Burada adi bölmə (/) əvəzinə DIVIDE() funksiyasından istifadə olunmuşdur
 -KPI Visual 2(Sales vs Previous Year): Actual Sales göstəricisi SAMEPERIODLASTYEAR vasitəsilə əvvəlki ilin eyni dövrü ilə müqayisə edilmişdir.
 -Card 1(Sales vs Target-Fərq Məbləği): Mütləq pul fərqini (-54M) göstərən standart kart vizualı.
 -Card 2(Sales vs Target %-Faiz Dəyişimi): Nisbi fərq göstəricisini (-72.80%) faiz formatında əks etdirən kart vizualı.
+
+**Checkpoint 5: Dashboard dizaynı (aydın vizual iyerarxiya, ardıcıl rəng sxemi, izdihamsız)**
+Hesabatın icraçı rəhbərlik (Executive Level) tərəfindən rahat oxunması, vizual cluttering-in(sıxlığın) aradan qaldırılması və peşəkar görünüş üçün UI/UX prinsipləri əsasında optimallaşdırma aparılmışdır.
+1. STRUKTUR VƏ VİZUAL İYERARXİYA(GRID LAYOUT):
+-Filter Panel(Sol Zolaq): Bütün dinamik süzgəclər(Channel, Year, Category, Country) sol tərəfdə vertikal qaydada qruplaşdırılaraq əsas analiz sahəsindən ayrılmışdır.
+-Executive Summary Panel(Yuxarı Zolaq): 4 ədəd hədəf və zaman müqayisəli KPI kartı(Actual vs Target, Actual vs PY, Sales vs Target, Sales vs Target %) yuxarı hissədə yan-yana yerləşdirilmişdir.
+-Analytical Grid(Orta və Aşağı Zolaq): Əsas satış və xərc dinamikası(Sales vs Total Cost Trend) və kateqoriya bölgüsü mərkəzdə, regional və ödəniş təfərrüatları (Map, Country Table, Payment Donut Chart) isə aşağı hissədə hizalanmışdır.
+
+2. VİZUAL TƏMİZLİK VƏ OPTİMALLAŞDIRMA(DE-CLUTTERING):
+-Təkrar və lazımsız sadə kartlar təmizlənmiş, xətti qrafiklər tək bir müqayisəli vizualda(Sales vs Total Cost) birləşdirilmişdir.
+-Standart avto-başlıqlar daha qısa və aydın biznes anlayışları ilə(məs: Sales Trend, Sales Distribution) əvəz olunmuşdur.
