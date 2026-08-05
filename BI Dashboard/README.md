@@ -70,3 +70,22 @@ Power BI həmin filtri bütün səhifədəki digər vizuallara avtomatik tətbiq
 - Table sətirləri filtrə uyğun daralır.
 Bir neçə slicer eyni anda istifadə edildikdə (məsələn Country="UAE" VƏ Channel="Retail"), filtrlər birlikdə(AND məntiqi ilə) tətbiq olunur—yəni yalnız hər iki şərtə uyğun data göstərilir.
 NƏTİCƏ: Bu, istifadəçiyə tək bir dashboard üzərində müxtəlif kəsimlərdə(ölkə,kateqoriya, il, kanal) sərbəst analiz aparmaq imkanı verir, ayrıca statik hesabatlar hazırlamağa ehtiyac qalmır.
+
+**Checkpoint 4: Hədəf/əvvəlki dövrlə müqayisəli KPI xülasə kartları**
+Layihənin Məqsədi:İcraçı rəhbərlik(Executive Level) üçün biznesin yalnız statik gəlirini deyil,illik müəyyən edilmiş hədəflərə(Targets) çatma dərəcəsini və keçən ilin eyni dövrü(Year-over-Year) ilə müqayisəli inkişaf dinamikasını dərhal izləməyə imkan verən dinamik KPI göstəricilərinin qurulmasıdır.
+Dashboard-da biznes metrikalarının dinamikasını, hədəfə çatma faizini və əvvəlki dövrlə müqayisəsini əks etdirmək üçün geniş DAX arxitekturası qurulmuş və 4 ədəd xülasə kartı yaradılmışdır.
+1. DATA MODELLƏŞDİRMƏ VƏ DAX ÖLÇÜLƏRİ (MEASURES):
+Model Optimallaşdırılması: DimDate2 cədvəli 'Mark as Date Table' olaraq təyin edilmişdir. FactSalesTarget cədvəlində TargetSalesAmount sütununun tipi Decimal Number-ə dəyişdirilmişdir.
+1)Actual Sales = SUM(FactSales[SalesAmount])
+2)Target Sales = SUM(FactSalesTarget[TargetSalesAmount])
+3)Sales vs Target = [Actual Sales] - [Target Sales]
+4)Sales vs Target % = DIVIDE([Actual Sales] - [Target Sales], [Target Sales])
+5)Sales Previous Year = CALCULATE([Actual Sales], SAMEPERIODLASTYEAR(DimDate2[Date]))
+6)Sales YoY % = DIVIDE([Actual Sales] - [Sales Previous Year], [Sales Previous Year])
+Burada adi bölmə (/) əvəzinə DIVIDE() funksiyasından istifadə olunmuşdur ki, məxrəc 0 və ya boş olduqda hesabat xəta verməsin.
+
+2. VİZUAL TƏTBİQİ:
+-KPI Visual 1(Sales vs Target): Actual Sales göstəricisi Target Sales hədəfi ilə müqayisə edilmiş, trend oxu üzrə kəsir və dinamika vizuallaşdırılmışdır.
+-KPI Visual 2(Sales vs Previous Year): Actual Sales göstəricisi SAMEPERIODLASTYEAR vasitəsilə əvvəlki ilin eyni dövrü ilə müqayisə edilmişdir.
+-Card 1(Sales vs Target-Fərq Məbləği): Mütləq pul fərqini (-54M) göstərən standart kart vizualı.
+-Card 2(Sales vs Target %-Faiz Dəyişimi): Nisbi fərq göstəricisini (-72.80%) faiz formatında əks etdirən kart vizualı.
