@@ -172,7 +172,7 @@ Hesablama (ROAS fərqi, dəfə ilə):
 Nəticə: Retention kampaniyaları Acquisition-dan qat-qat daha səmərəlidir.Amma Acquisition kampaniyalarına ayrılan büdcə/gəlir həcmi daha böyükdür (Revenue 2.6M və 922K) — yəni marketinq büdcəsinin böyük hissəsi nisbətən az səmərəli kanala yönəlib.
 ÜMUMİ NƏTİCƏ:Ümumi göstəricilər müsbət olsa da, bunun altında struktur bir qeyri-səmərəlilik var:Acquisition kampaniyaları(yeni müştəri cəlbi) Retention kampaniyalarından(mövcud müştəri saxlanması) qat-qat az səmərəlidir, lakin büdcənin böyük hissəsini alır.Bu, həm New müştəri seqmentinin zəif göstəricisini, həm də ümumi ROAS-ın Retention-a nisbətən aşağı qalmasını izah edir.
 
-**Checkpoint 4 – Narrativi Dəstəkləyən Vizuallaşdırma**
+**Checkpoint 4–Narrativi Dəstəkləyən Vizuallaşdırma**
 Bu checkpointdə 3 qrafik hazırlandı, hər biri kök-səbəb analizindəki konkret bir iddianı vizual olaraq dəstəkləyir:
 1. ROAS by Campaign Objective
 Retention kampaniyalarının (ROAS 140.13) Acquisition kampaniyalarından(ROAS 9.72) 14 dəfə daha səmərəli olduğunu göstərir — əsas kök-səbəb tapıntısı.
@@ -182,3 +182,17 @@ Q4 2024(təqribən 3.17M) vs Q4 2025(təqribən 3.53M) — ümumi gəlir artım�
 Q4 2024(təqribən 1.04M) vs Q4 2025 (təqribən 1.04M) — trafikin demək olar ki, dəyişmədiyini göstərir, bu da gəlir artımının yeni trafik deyil, daha yaxşı konversiya sayəsində baş verdiyini sübut edir.
 
 İstifadə edilən alət: Power BI Desktop. DAX measure-lar(Total Revenue, Total Sessions, ROAS) və hesablanmış "Period" sütunu istifadə olunub.
+
+**Checkpoint 5–YAZILI XÜLASƏ**
+*VƏZİYYƏT*
+2025-in son rübündə(Oktyabr-Dekabr) marketinq performansı, 2024-ün eyni dövrü(Oktyabr-Dekabr 2024) ilə müqayisə edildi. Analiz zamanı mövsümilik təhrifindən qaçmaq üçün yalnız eyni təqvim dövrü müqayisə edilib.
+İlkin baxışda ümumi göstəricilər müsbətdir: Revenue +11.2%, Conversion Rate +4%, AOV +6.7% artıb. Lakin bu müsbət ümumi mənzərənin altında diqqət tələb edən strukturlar mövcuddur.
+*TAPINTILAR*
+1. Trafik artımı dayanıb:Sessions demək olar ki, dəyişməyib. Deməli, gəlir artımı yeni müştəri cəlbindən deyil, mövcud trafikin daha yaxşı çevrilməsindən qaynaqlanır.
+2. Kanal və region səviyyəsində problem yoxdur:Bütün 4 kanal(Email, Organic Search, Paid Search, Paid Social) və bütün 4 region(North, South, East, West) bərabər dərəcədə sabit/müsbət performans göstərir.
+3. Yeni müştərilər zəif performans göstərir:New seqmenti(ROAS 11.84, CR 5.74%) Loyal(ROAS 13.67, CR 6.31%) və Returning(ROAS 13.07, CR 6.06%) seqmentlərindən aşağıdır.
+4. ƏSAS TAPINTI—Kampaniya məqsədi arasında kəskin fərq:Retention kampaniyaları ROAS 140.13 göstərdiyi halda, Acquisition kampaniyaları cəmi ROAS 9.72 göstərir — 14 dəfəlik fərq. Buna baxmayaraq, Acquisition kampaniyalarına ayrılan büdcə/gəlir həcmi(2.6M) Retention-dan(922K) xeyli böyükdür.
+Bu tapıntılar bir-birini tamamlayır:Acquisition-a yönəlmiş böyük büdcə nisbətən aşağı səmərəlilik göstərir, bu da həm New müştəri seqmentinin zəif nəticəsini, həm də trafik artımının niyə gəlir artımı qədər sürətli olmadığını izah edir.
+*TÖVSİYƏ*
+Marketinq büdcəsinin bir hissəsi Acquisition kampaniyalarından Retention kampaniyalarına köçürülməlidir. Konkret addım: 
+növbəti rübdə Acquisition büdcəsinin 15-20%-ini Retention/Email kampaniyalarına yönəltmək və nəticədə ROAS-ın ümumi səviyyədə necə dəyişdiyini izləmək tövsiyə olunur. Bu, ROAS-dakı 14 dəfəlik fərqə əsaslanaraq, ümumi marketinq gəlirliliyini əhəmiyyətli dərəcədə artıra bilər.
