@@ -117,3 +117,57 @@ SELECT
 FROM marketing_events e JOIN customers c ON e.customer_id = c.customer_id
 WHERE e.date BETWEEN '2025-10-01' AND '2025-12-31'
 GROUP BY c.customer_segment;
+
+**Checkpoint 3–Kök-səbəb tərzli analiz (metrikanın region/kanal/zaman üzrə seqmentlərə bölünərək araşdırılması)**
+METODOLOGIYA: Analiz 4 səviyyədə seqmentləşdirdik ki, ümumi rəqəmin arxasında gizlənən fərqləri aşkarlayaq:
+1. Zaman(Q4 2024 vs Q4 2025, eyni təqvim dövrü)
+2. Kanal(Email, Organic Search, Paid Search, Paid Social)
+3. Region(North, South, East, West)
+4. Müştəri seqmenti(New, Returning, Loyal) və kampaniya məqsədi(Acquisition, Retention)
+TAPINTILAR:
+1. ÜMUMI SƏVİYYƏ (Q4 2024->Q4 2025)
+Revenue:3,173,087.12 -> 3,528,235.61
+Hesablama:(3,528,235.61 - 3,173,087.12) / 3,173,087.12 × 100 = 11.19% ≈ +11.2%
+
+Conversion Rate: 5.8% -> 6.03%
+Hesablama: (6.03 - 5.8) / 5.8 × 100 = 3.97%
+
+AOV: 52.7 -> 56.24
+Hesablama: (56.24 - 52.7) / 52.7 × 100 = 6.72% 
+
+ROAS: 12.4 -> 12.85
+Hesablama: (12.85 - 12.4) / 12.4 × 100 = 3.63%
+
+Sessions: 1,038,924 -> 1,039,875
+Hesablama: (1,039,875 - 1,038,924) / 1,038,924 × 100 = 0.09%
+Nəticə: Performans yaxşılaşıb, amma Sessions (trafik) demək olar ki, dəyişməyib. Deməli, artım yeni trafik cəlb etməkdən deyil, mövcud trafikin daha yaxşı çevrilməsindən qaynaqlanır.
+
+2. KANAL SƏVİYYƏSİ
+Bütün 4 kanal (Email, Organic Search, Paid Search, Paid Social) təxminən bərabər dərəcədə yaxşılaşıb. Heç bir kanal geriləməyib—kanal səviyyəsində 
+problem yoxdur.
+
+3. REGION SƏVİYYƏSİ
+North: ROAS 12.70, CR 6.03%
+South: ROAS 12.90, CR 6.05%
+East: ROAS 12.89, CR 6.01%
+West: ROAS 12.96, CR 6.04%
+Nəticə: Regionlar arasında əhəmiyyətli fərq yoxdur—region səviyyəsində problem yoxdur.
+
+4. MÜŞTƏRİ SEQMENTİ SƏVİYYƏSİ
+New: ROAS 11.84, CR 5.74%
+Loyal: ROAS 13.67, CR 6.31%
+Returning: ROAS 13.07, CR 6.06%
+
+Hesablama (New vs Loyal ROAS fərqi):
+(13.67 - 11.84) / 13.67 × 100 = 13.39% (Təqribən New seqmenti Loyal-dan 13.4% aşağıdır)
+Nəticə: New müştərilər digər seqmentlərdən aydın şəkildə zəif performans göstərir.
+
+5. ƏSAS KÖK-SƏBƏB — KAMPANİYA MƏQSƏDİ SƏVİYYƏSİ
+Retention: ROAS 140.13, CR 7.28%, Revenue 922,037.49
+Acquisition: ROAS 9.72, CR 5.70%, Revenue 2,606,198.12
+
+Hesablama (ROAS fərqi, dəfə ilə):
+140.13 / 9.72 = 14.42 (təqribən Retention, Acquisition-dan 14 dəfə daha yüksək ROAS göstərir)
+
+Nəticə: Retention kampaniyaları Acquisition-dan qat-qat daha səmərəlidir.Amma Acquisition kampaniyalarına ayrılan büdcə/gəlir həcmi daha böyükdür (Revenue 2.6M və 922K) — yəni marketinq büdcəsinin böyük hissəsi nisbətən az səmərəli kanala yönəlib.
+ÜMUMİ NƏTİCƏ:Ümumi göstəricilər müsbət olsa da, bunun altında struktur bir qeyri-səmərəlilik var:Acquisition kampaniyaları(yeni müştəri cəlbi) Retention kampaniyalarından(mövcud müştəri saxlanması) qat-qat az səmərəlidir, lakin büdcənin böyük hissəsini alır.Bu, həm New müştəri seqmentinin zəif göstəricisini, həm də ümumi ROAS-ın Retention-a nisbətən aşağı qalmasını izah edir.
