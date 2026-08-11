@@ -171,3 +171,14 @@ Hesablama (ROAS fərqi, dəfə ilə):
 
 Nəticə: Retention kampaniyaları Acquisition-dan qat-qat daha səmərəlidir.Amma Acquisition kampaniyalarına ayrılan büdcə/gəlir həcmi daha böyükdür (Revenue 2.6M və 922K) — yəni marketinq büdcəsinin böyük hissəsi nisbətən az səmərəli kanala yönəlib.
 ÜMUMİ NƏTİCƏ:Ümumi göstəricilər müsbət olsa da, bunun altında struktur bir qeyri-səmərəlilik var:Acquisition kampaniyaları(yeni müştəri cəlbi) Retention kampaniyalarından(mövcud müştəri saxlanması) qat-qat az səmərəlidir, lakin büdcənin böyük hissəsini alır.Bu, həm New müştəri seqmentinin zəif göstəricisini, həm də ümumi ROAS-ın Retention-a nisbətən aşağı qalmasını izah edir.
+
+**Checkpoint 4 – Narrativi Dəstəkləyən Vizuallaşdırma**
+Bu checkpointdə 3 qrafik hazırlandı, hər biri kök-səbəb analizindəki konkret bir iddianı vizual olaraq dəstəkləyir:
+1. ROAS by Campaign Objective
+Retention kampaniyalarının (ROAS 140.13) Acquisition kampaniyalarından(ROAS 9.72) 14 dəfə daha səmərəli olduğunu göstərir — əsas kök-səbəb tapıntısı.
+2. Total Revenue by Period
+Q4 2024(təqribən 3.17M) vs Q4 2025(təqribən 3.53M) — ümumi gəlir artımını vizuallaşdırır.
+3. Total Sessions by Period
+Q4 2024(təqribən 1.04M) vs Q4 2025 (təqribən 1.04M) — trafikin demək olar ki, dəyişmədiyini göstərir, bu da gəlir artımının yeni trafik deyil, daha yaxşı konversiya sayəsində baş verdiyini sübut edir.
+
+İstifadə edilən alət: Power BI Desktop. DAX measure-lar(Total Revenue, Total Sessions, ROAS) və hesablanmış "Period" sütunu istifadə olunub.
