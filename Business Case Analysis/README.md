@@ -196,3 +196,18 @@ Bu tapıntılar bir-birini tamamlayır:Acquisition-a yönəlmiş böyük büdcə
 *TÖVSİYƏ*
 Marketinq büdcəsinin bir hissəsi Acquisition kampaniyalarından Retention kampaniyalarına köçürülməlidir. Konkret addım: 
 növbəti rübdə Acquisition büdcəsinin 15-20%-ini Retention/Email kampaniyalarına yönəltmək və nəticədə ROAS-ın ümumi səviyyədə necə dəyişdiyini izləmək tövsiyə olunur. Bu, ROAS-dakı 14 dəfəlik fərqə əsaslanaraq, ümumi marketinq gəlirliliyini əhəmiyyətli dərəcədə artıra bilər.
+
+
+**Checkpoint 6–KONKRET, ƏMƏLİ TÖVSİYƏ**
+TÖVSİYƏ:Acquisition kampaniyalarının büdcəsinin 15%-ini(təxminən 390,000 vahid) Retention kampaniyalarına köçürmək olar.
+SÜBUT:Q4 2025 dövründə Retention kampaniyalarının ROAS-ı 140.13, Acquisition kampaniyalarının ROAS-ı isə cəmi 9.72 olub—bu isə 14 dəfəlik fərqdir. Buna baxmayaraq, Acquisition-a ayrılan gəlir həcmi(2,606,198) Retention-dan(922,037) 2.8 dəfə çoxdur.
+
+HESABLAMA(gözlənilən effekt):
+Əgər Acquisition xərcinin 15%-i Retention-a köçürülərsə:
+- Acquisition xərci:mövcud səviyyədən 15% aşağı düşəcək.
+- Bu vəsait Retention-a əlavə olunanda, Retention-un yüksək ROAS-ı(140.13) sayəsində,həmin vəsaitdən yaranan əlavə gəlir Acquisition-da yaranacaq gəlirdən təqribən 14 dəfə çox olacaq.
+- Nəticədə ümumi ROAS-ın eyni ümumi büdcə çərçivəsində əhəmiyyətli dərəcədə yüksəlməsi gözlənilir.
+
+İCRA ADDIMI:Növbəti rüb ərzində(Yanvar-Mart) büdcə bölgüsünü tədricən dəyişdirmək—Acquisition-un 15%-ini Email/Retention kampaniyalarına yönəltmək, rüb sonunda ROAS-ın faktiki dəyişikliyini yenidən ölçmək və nəticəyə görə növbəti rübdə faizi artırıb-artırmamağı qərarlaşdırmaq lazımdır.
+
+RİSK VƏ MƏHDUDİYYƏT:Retention kampaniyaları yalnız mövcud müştərilərə yönəlir—bu köçürmə yeni müştəri axınını azalda bilər.Ona görə tam köçürmə deyil, məhz 15% kimi mülayim bir başlanğıc addım tövsiyə olunur ki,uzunmüddətli böyümə potensialı qorunsun.
