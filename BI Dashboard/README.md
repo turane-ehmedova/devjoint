@@ -25,6 +25,11 @@ NƏTİCƏ: Bütün 7 cədvəl bir-biri ilə əlaqələndirildi və data model da
 -Alət: Power BI Desktop
 -Data Source: CSV faylları(Local file import)
 
+Qeyd:
+DÜZƏLİŞ—FactSalesTarget <-> DimProduct Əlaqəsi
+Admin rəyinə əsasən aşkar olundu ki, bu əlaqə həm FactSalesTarget, həm də DimProduct cədvəllərində Category sütununun təkrarlanan dəyərlər ehtiva etməsi səbəbindən Many-to-Many kardinallıqda idi və "Both"(bidirectional) cross-filter ilə qurulmuşdu — bu, ilkin checkpoint mətnində açıqlanmamışdı.
+Düzəliş:Cross-filter direction "Both"-dan "Single"('DimProduct' filters 'FactSalesTarget') istiqamətinə dəyişdirildi. Bu, star schema konvensiyasına uyğundur (Dimension cədvəl Fact cədvəli filtrləyir, əksinə yox) və qeyri-müəyyən filtrasiya nəticələrinin qarşısını alır.
+
 **Checkpoint 2: Dataya uyğun seçilmiş 4+ fərqli qrafik tipi**
 İşçi Masasının (Dashboard) strukturu biznes analitikası standartlarına uyğun olaraq "Tək Səhifəlik İcraçı Paneli" (Single-Page Executive Dashboard) formasında tərtib olunmuşdur. Bütün vizual seçimləri məqsədlidir və müəyyən analitik suallara cavab verir:
 1. Card Visuals(Əsas İcraçı Metrikaları — KPI)
